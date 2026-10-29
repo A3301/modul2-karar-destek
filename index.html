@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modül 2: Karar Destek Sistemleri ve Tahminleyici Modelleme</title>
+<meta name="description" content="Tarsus Üniversitesi Sağlık Bilimleri Fakültesi · Öğretim Üyelerine Yapay Zekâ Eğitimi · Modül 2 katılımcı materyalleri">
+<meta name="theme-color" content="#1F3A5F"><link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="ikon-192.png"><link rel="apple-touch-icon" href="ikon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="M2 YZ Eğitimi">
+<style>
+:root{--navy:#1F3A5F;--teal:#2A9D8F;--coral:#E76F51;--amber:#E9C46A;--bg:#F6F8FA;--card:#FFFFFF;--ink:#22303C;--muted:#5F6B76;--line:#DCE3EA}
+@media (prefers-color-scheme:dark){:root{--bg:#0F1720;--card:#17212B;--ink:#E6EDF3;--muted:#9AA7B4;--line:#2A3642}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Calibri,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;font-size:17px}
+header{background:var(--navy);color:#fff;padding:28px 16px 30px}
+.w{max-width:920px;margin:0 auto;padding:0 16px}
+header .k{opacity:.8;font-size:14px;letter-spacing:.3px}
+header h1{font-family:Cambria,Georgia,serif;font-size:clamp(26px,5vw,38px);line-height:1.15;margin:.35em 0 .3em}
+header .rozet{display:inline-block;background:var(--teal);border-radius:999px;padding:3px 12px;font-weight:700;font-size:14px;margin-bottom:6px}
+header p{margin:.4em 0 0;max-width:700px;opacity:.95}
+h2{font-family:Cambria,Georgia,serif;color:var(--navy);font-size:24px;margin:34px 0 12px}
+@media (prefers-color-scheme:dark){h2{color:#8FB7E8}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card h3{margin:0 0 4px;font-size:19px}.card p{margin:0 0 12px;color:var(--muted);font-size:15px}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+a.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;padding:9px 14px;border-radius:10px;background:var(--navy);color:#fff}
+a.btn.ikincil{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+@media (prefers-color-scheme:dark){a.btn.ikincil{color:#8FB7E8;border-color:#8FB7E8}}
+a.btn small{font-weight:400;opacity:.8}
+ol.adim,ul.liste{margin:0;padding-left:22px}ol.adim li,ul.liste li{margin:6px 0}
+.tablo{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.tablo td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;font-size:15px}.tablo tr:first-child td{border-top:none}
+.tablo td:last-child{text-align:right;white-space:nowrap}
+.uyari{background:#FDEDE8;border:1px solid #F4C4B6;color:#7A2E1C;border-radius:12px;padding:14px 16px}
+@media (prefers-color-scheme:dark){.uyari{background:#3A211B;border-color:#6B3A2E;color:#F6D3C8}}
+label.kontrol{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line)}label.kontrol:first-child{border-top:none}
+label.kontrol input{width:20px;height:20px;margin-top:3px;accent-color:var(--teal);flex:none}
+body::before{content:"Ali AKDAĞLI";position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-32deg);font:700 clamp(48px,12vw,140px)/1 Calibri,"Segoe UI",sans-serif;color:rgba(128,128,128,.10);white-space:nowrap;pointer-events:none;z-index:9999}
+footer{color:var(--muted);font-size:14px;padding:30px 16px 40px;text-align:center}
+code{background:rgba(127,127,127,.15);padding:1px 5px;border-radius:5px}
+</style></head><body>
+<header><div class="w"><div class="k">Tarsus Üniversitesi Sağlık Bilimleri Fakültesi · Öğretim Üyelerine Yapay Zekâ Eğitimi</div>
+<h1>Modül 2: Karar Destek Sistemleri ve Tahminleyici Modelleme</h1><span class="rozet">12 saat · 4 oturum</span>
+<p>Random Forest, XGBoost gibi algoritmaların çıktılarını klinik olarak okumayı öğreniyoruz: duyarlılık, PPV, ROC/AUC, kalibrasyon ve SHAP. Sepsis, diyabet komplikasyonları, malnütrisyon ve preeklampsi örnekleriyle.</p><p style="opacity:.8;font-size:15px">Eğitmen: Ali AKDAĞLI</p></div></header>
+<main class="w">
+<h2>Kursa gelmeden önce</h2>
+<div class="card" id="hazirlik"><label class="kontrol"><input type="checkbox" data-k="0"><span>Dizüstü bilgisayar (Windows veya macOS) ve şarj aleti. Orange tablet ve telefonda çalışmaz.</span></label><label class="kontrol"><input type="checkbox" data-k="1"><span>Orange Data Mining&#x27;i orangedatamining.com/download adresinden indirip kurun.</span></label><label class="kontrol"><input type="checkbox" data-k="2"><span>Orange&#x27;ı açın: Options → Add-ons → listeden &quot;Explain&quot; işaretleyin → OK. Orange&#x27;ı kapatıp yeniden açın.</span></label><label class="kontrol"><input type="checkbox" data-k="3"><span>Bu sayfadaki 5 veri dosyasını bilgisayarınıza indirin (tek seferde: GitHub sayfasında Code → Download ZIP).</span></label><label class="kontrol"><input type="checkbox" data-k="4"><span>Kodlama bilgisi gerekmez. Duyarlılık ve özgüllük kavramlarını hatırlamanız yeterli.</span></label><p style="margin:10px 0 0;font-size:13px">İşaretleriniz yalnızca bu cihazda saklanır.</p></div>
+<h2>Ders materyalleri</h2><div class="grid"><div class="card"><h3>Ders notu</h3><p>Kısaltma kartları, tıbbi terim kutuları, çözümlü hesaplar ve sözlükler.</p><div class="btns"><a class="btn" href="belgeler/Modul2_Ders_Notu.pdf" target="_blank" rel="noopener">PDF oku <small>(5,3 MB)</small></a><a class="btn ikincil" href="belgeler/Modul2_Ders_Notu.pdf" download>PDF indir</a></div></div><div class="card"><h3>Sunum</h3><p>Derste kullanılan slaytlar.</p><div class="btns"><a class="btn" href="belgeler/Modul2_Katilimci_Sunumu.pdf" target="_blank" rel="noopener">PDF oku <small>(7,1 MB)</small></a><a class="btn ikincil" href="belgeler/Modul2_Katilimci_Sunumu.pdf" download>PDF indir</a></div></div></div>
+<h2>Uygulama veri setleri (Orange&#x27;da açılacak)</h2><table class="tablo"><tr><td><b>sepsis_sentetik.csv</b><br>Sepsis (24 saat), 3000 servis hastası · sentetik</td><td><a class="btn ikincil" href="veri/sepsis_sentetik.csv" download>İndir</a></td></tr><tr><td><b>diyabet_pima.csv</b><br>Diyabet, 768 Pima yerlisi kadın · gerçek açık veri</td><td><a class="btn ikincil" href="veri/diyabet_pima.csv" download>İndir</a></td></tr><tr><td><b>diyabetik_ayak_sentetik.csv</b><br>Diyabetik ayak ülseri (12 ay), 2000 hasta · sentetik</td><td><a class="btn ikincil" href="veri/diyabetik_ayak_sentetik.csv" download>İndir</a></td></tr><tr><td><b>malnutrisyon_sentetik.csv</b><br>Malnütrisyon (GLIM), 1500 yaşlı hasta · sentetik</td><td><a class="btn ikincil" href="veri/malnutrisyon_sentetik.csv" download>İndir</a></td></tr><tr><td><b>preeklampsi_sentetik.csv</b><br>Preeklampsi, 4000 gebe (11–13. hafta) · sentetik</td><td><a class="btn ikincil" href="veri/preeklampsi_sentetik.csv" download>İndir</a></td></tr></table>
+<p style="color:var(--muted);font-size:15px">Hepsini birden indirmek için GitHub sayfasında <b>Code → Download ZIP</b> seçin.</p>
+<h2>Orange kurulumu adım adım</h2><div class="card"><ol class="adim"><li>orangedatamining.com/download adresine gidin, işletim sisteminize uygun yükleyiciyi indirin.</li><li>Windows: indirilen .exe dosyasını çalıştırıp &quot;İleri&quot; diyerek kurun. macOS: .dmg dosyasını açıp Orange&#x27;ı Uygulamalar klasörüne sürükleyin.</li><li>Orange&#x27;ı açın. Üst menüden Options → Add-ons… seçin.</li><li>Listede &quot;Explain&quot; eklentisini işaretleyip OK&#x27;e basın; kurulum bitince Orange&#x27;ı yeniden başlatın.</li><li>Deneme: soldaki &quot;File&quot; bileşenini tuvale sürükleyin, çift tıklayın ve sepsis_sentetik.csv dosyasını açın. Tabloyu görüyorsanız hazırsınız.</li></ol></div>
+<h2>Önemli</h2><div class="uyari">Uygulama dosyalarının Pima dışındakileri sentetik ya da kurgusaldır, gerçek hasta içermez.
+Kurs boyunca hiçbir YZ aracına gerçek hasta veya katılımcı verisi yazmayın (6698 sayılı KVKK).</div>
+<h2>Telefona uygulama gibi ekleyin</h2><div class="card"><ul class="liste">
+<li><b>Android (Chrome):</b> sağ üstteki ⋮ menüsü → <b>Ana ekrana ekle</b>.</li>
+<li><b>iPhone / iPad (Safari):</b> alttaki Paylaş düğmesi → <b>Ana Ekrana Ekle</b>.</li>
+<li>Simgeye dokununca bu sayfa açılır; PDF'ler telefonun kendi görüntüleyicisinde okunur.</li></ul></div>
+</main>
+<footer>Tarsus Üniversitesi Sağlık Bilimleri Fakültesi · Modül 2 · Ali AKDAĞLI · 2026</footer>
+<script>
+(function(){var k="modul2-karar-destek-hazirlik";var d={};try{d=JSON.parse(localStorage.getItem(k)||"{}")}catch(e){}
+document.querySelectorAll("#hazirlik input").forEach(function(c){c.checked=!!d[c.dataset.k];c.addEventListener("change",function(){d[c.dataset.k]=c.checked;try{localStorage.setItem(k,JSON.stringify(d))}catch(e){}})})})();
+</script></body></html>
