@@ -1,6 +1,6 @@
 # Modül 2: Karar Destek Sistemleri ve Tahminleyici Modelleme
 
-**Tarsus Üniversitesi Sağlık Bilimleri Fakültesi · Öğretim Üyelerine Yapay Zekâ Eğitimi** · Eğitmen: Ali AKDAĞLI · 12 saat (4 oturum)
+**Sağlık Bilimleri Fakültesi · Öğretim Elemanları için Yapay Zekâ Eğitimi** · Eğitmen: Ali AKDAĞLI · 12 saat (4 oturum)
 
 Random Forest, XGBoost gibi algoritmaların çıktılarını klinik olarak okumayı öğreniyoruz: duyarlılık, PPV, ROC/AUC, kalibrasyon ve SHAP. Sepsis, diyabet komplikasyonları, malnütrisyon ve preeklampsi örnekleriyle.
 
