@@ -6,13 +6,12 @@ Random Forest, XGBoost gibi algoritmaların çıktılarını klinik olarak okuma
 
 ## En kolay kullanım
 - **Web sayfası (telefon dahil):** `https://A3301.github.io/modul2-karar-destek/` adresinden erişilebilir. Sayfa, ana ekrana eklenerek uygulama gibi kullanılabilir.
-- **Hepsini indirmek:** Bu sayfada yeşil **Code** düğmesi → **Download ZIP**. ZIP dosyası açıldıktan sonra `index.html` dosyası çift tıklanarak görüntülenir. Kurulum gerekmez.
 
 ## Kursa gelmeden önce
 - [ ] Uygulamalar için dizüstü ya da masaüstü bilgisayar (Windows veya macOS) ve şarj aleti. Orange tablet ve telefonda çalışmadığından, bu cihazlarla katılım hâlinde uygulamalar perdeden ve ders notundaki ekran çizimlerinden izlenebilir.
 - [ ] Orange Data Mining, orangedatamining.com/download adresinden indirilerek kurulur.
 - [ ] Orange açıldıktan sonra Options → Add-ons menüsünden "Explain" eklentisi işaretlenir ve OK ile onaylanır; ardından program yeniden başlatılır.
-- [ ] Bu sayfadaki 5 veri dosyası bilgisayara indirilir (tümü için: GitHub sayfasında Code → Download ZIP).
+- [ ] Bu sayfadaki 5 veri dosyası bilgisayara indirilir.
 - [ ] Kodlama bilgisi gerekmez; duyarlılık ve özgüllük kavramlarına aşinalık yeterlidir.
 
 ## Orange kurulumu adım adım
