@@ -20,6 +20,7 @@ Random Forest, XGBoost gibi algoritmaların çıktılarını klinik olarak okuma
 3. Orange açılır; üst menüden Options → Add-ons… seçilir.
 4. Listede "Explain" eklentisi işaretlenip OK ile onaylanır; kurulum tamamlandığında Orange yeniden başlatılır.
 5. Kontrol: soldaki "File" bileşeni tuvale taşınır, çift tıklanır ve sepsis_sentetik.csv dosyası açılır. Tablo görüntüleniyorsa kurulum tamamlanmıştır.
+6. Uygulamalar Orange 3.40 sürümüyle hazırlanmıştır; daha yeni sürümlerde menü adları küçük farklılıklar gösterebilir.
 
 ## İçerik
 | Dosya | Açıklama |
